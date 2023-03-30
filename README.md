@@ -44,3 +44,5 @@ Building a ML model to predict a possible fraudulent transaction based on a simu
 * merch_long:longitude of the merchant
 
 is_fraud: Whether the transaction is fraud(1) or not(0)
+
+The data is from [kaggle](https://www.kaggle.com/datasets/dermisfit/fraud-transactions-dataset)
