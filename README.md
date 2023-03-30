@@ -33,14 +33,14 @@ Building a ML model to predict a possible fraudulent transaction based on a simu
 
 * job:trade of the card holder
 
-dob:Date of birth of the card holder
+* dob:Date of birth of the card holder
 
-trans_num: Transaction ID
+* rans_num: Transaction ID
 
-unix_time: Unix time which is the time calculated since 1970 to today.
+* unix_time: Unix time which is the time calculated since 1970 to today.
 
-merch_lat: latitude of the merchant
+* merch_lat: latitude of the merchant
 
-merch_long:longitude of the merchant
+* merch_long:longitude of the merchant
 
 is_fraud: Whether the transaction is fraud(1) or not(0)
