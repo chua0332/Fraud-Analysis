@@ -9,9 +9,9 @@ import pickle
 app = FastAPI()
 
 #Load both the model and the preprocessor pkl files
-model_in = open('/Users/eugenechua/Downloads/skillsfuture_interview/fraud/Fraud-Analysis/XGB_classifier.pkl','rb')
+model_in = open('XGB_classifier.pkl','rb')
 XGBmodel = pickle.load(model_in)
-preprocessor_in = open('/Users/eugenechua/Downloads/skillsfuture_interview/fraud/Fraud-Analysis/preprocessor.pkl','rb')
+preprocessor_in = open('preprocessor.pkl','rb')
 preprocessor = pickle.load(preprocessor_in)
 
 
