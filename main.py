@@ -26,8 +26,9 @@ def predict_fraud(category: object,
                   amt: float,
                   gender: object,
                   job: object,
-                  merchant: object):
-    input_df = pd.DataFrame(dict(category=[category],amt=[amt],gender=[gender],job=[job],merchant=[merchant]))
+                  merchant: object,
+                  age: int):
+    input_df = pd.DataFrame(dict(category=[category],amt=[amt],gender=[gender],job=[job],merchant=[merchant],age=[age]))
     
     X_processed = preprocessor.transform(input_df)
     
