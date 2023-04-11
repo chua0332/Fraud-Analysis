@@ -6,9 +6,9 @@ import streamlit as st
 
 
 #Load both the model and the preprocessor pkl files
-model_in = open('/Users/eugenechua/Downloads/skillsfuture_interview/fraud/objects/XGB_classifier.pkl','rb')
+model_in = open('/Users/eugenechua/Downloads/skillsfuture_interview/fraud/Fraud-Analysis/XGB_classifier.pkl','rb')
 XGBmodel = pickle.load(model_in)
-preprocessor_in = open('/Users/eugenechua/Downloads/skillsfuture_interview/fraud/objects/preprocessor.pkl','rb')
+preprocessor_in = open('/Users/eugenechua/Downloads/skillsfuture_interview/fraud/Fraud-Analysis/preprocessor.pkl','rb')
 preprocessor = pickle.load(preprocessor_in)
 
 
@@ -25,11 +25,13 @@ def main():
     gender = st.text_input("gender","Type Here")
     job = st.text_input("job","Type Here")
     merchant = st.text_input("merchant","Type Here")
+    age = st.text_input("age","Type Here")
     input_df = {'category': category,
                 'amt': amt,
                 'gender': gender,
                 'job': job,
-                'merchant': merchant}
+                'merchant': merchant,
+                'age': age}
     input_df = pd.DataFrame(input_df, index=[0])
     X_processed = preprocessor.transform(input_df)
     if st.button("Predict"):
